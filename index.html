@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Método de Newton-Raphson</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="img/icon.png" />
+    <script src="./biseccion.js"></script>
+    <script src="./libs/math/math.js"></script>
+    <script src="./libs/math/function-plot.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/logo.png" alt="">
+
+        </div>
+        <div>
+            MÉTODOS NUMÉRICOS - PROYECTO FINAL
+        </div>
+    </header>
+    <section>
+
+        
+
+        <div class="container">
+            <div class="panel left-panel">
+                <h1>Método de Newton-Raphson</h1>
+                <input type="text" id="initialValue" placeholder="Valor inicial (x0)">
+                <button onclick="calculateRoot()">Calcular Raíz</button>
+                <div class="result" id="resultNewton"></div>
+                
+            </div>
+            <div class="panel right-panel ">
+                <h2>Procedimiento</h2>
+                <div id="procedureNewton"></div>
+            </div>
+            <div class="panel three-panel">
+                <canvas class="myChart" id="myChartNewton" width="0" height="0"></canvas>
+            </div>
+        </div>
+        <div class="container">
+            <div class="panel">
+                <h1>Regresión Lineal: Mínimos Cuadrados</h1>
+                <p>Introduce los puntos de datos en formato (x1,y1),(x2,y2),...</p>
+                <input type="text" id="dataPoints" placeholder="Puntos (x1,y1),(x2,y2),...">
+                <button onclick="calculateLinearRegression()">Calcular Regresión</button>
+                <div class="result" id="linearResult"></div>
+            </div>
+            
+            <div class="panel right-panel ">
+                <h2>Procedimiento</h2>
+                <div class="procedure" id="procedureLinear"></div>
+            </div>
+            <div class="panel three-panel">
+                <canvas class="myChart" id="myChartLinear" width="0" height="0"></canvas>
+            </div>
+        </div>
+
+        <section class="container">
+            <div class="panel">
+                <h1>Método de Bisección</h1>
+                <div class="inputs">            
+                    <div class="input_row">
+                        <p class="label">f(x)</p>
+                        <input class="input" id="f" value="x^3+4x^2-10"/>
+                    </div>
+        
+                    <div class="input_row">
+                        <p class="label">a</p>
+                        <input class="input" id="a" value="1"/>
+                    </div>
+        
+                    <div class="input_row">
+                        <p class="label">b</p>
+                        <input class="input" id="b" value="2"/>
+                    </div>
+        
+                    <div class="input_row">
+                        <p class="label">T</p>
+                        <input class="input" id="T" value="0.0001"/>
+                    </div>
+        
+                    <div class="input_row">
+                        <p class="label">N</p>
+                        <input class="input" id="N" value="20"/>
+                    </div>
+    
+                    <div class="input_row">
+                        <p class="label">milis</p>
+                        <input class="input" id="milis" value="250"/>
+                    </div>
+    
+                    <button onclick="ejecutar()">Ejecutar</button>
+    
+                    <div id="result" class="result">
+    
+                    </div>
+                </div>
+                <div id="plot-div" class="plot-div">
+                    <div id="plot"></div>
+                </div>            
+            </div>
+            <h2>Procedimiento</h2>
+            <div class="table-container">
+                <table id="table">
+                    <tr><th>n</th><th>a</th><th>b</th><th>p</th><th>f(p)</th><th>e</th></tr>
+                </table>
+    
+            </div>
+        </section>
+
+    </section>
+
+
+    <footer>
+        Carlos Delgado - Gengis Hidalgo - Jesus Gil - Sergio Estrada - Steven Victoria 
+    </footer>
+    
+    <script src="newtonRaphson.js"></script>
+    <script src="regresionLineal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
