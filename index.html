@@ -8,14 +8,15 @@
     <script src="./biseccion.js"></script>
     <script src="./libs/math/math.js"></script>
     <script src="./libs/math/function-plot.js"></script>
+    <script src="./DiferenciasDivididas.js"></script>
 </head>
 <body>
     <header>
         <div>
-            <img src="img/logo.png" alt="">
+            <img class="img" src="img/logo.png" alt="">
 
         </div>
-        <div>
+        <div class="title-metodos">
             MÉTODOS NUMÉRICOS - PROYECTO FINAL
         </div>
     </header>
@@ -57,7 +58,7 @@
             </div>
         </div>
 
-        <section class="container">
+        <div class="container">
             <div class="panel">
                 <h1>Método de Bisección</h1>
                 <div class="inputs">            
@@ -108,7 +109,38 @@
                 </table>
     
             </div>
-        </section>
+        </div>
+
+       
+            <div class="container">
+                <div class="panel left-panel">
+                    <h1>Metodo De Interporlacion de Newton (Diferencias Divididas)</h1>
+                    <input type="text" id="num-points-input" placeholder="Ingrese el numero de puntos para la interpolación:">
+                    <button onclick="submitPoints()">Calcular</button>
+                    <div id="btn"></div>
+                    
+                </div>
+
+                
+                <div class="panel three-panel">
+                    <!-- Mostrar los datos ingresados  -->
+                    
+                    <table id="user-data-table"></table>
+
+                    <div id="newton-table"></div>
+
+                    <p id="evaluation-result"></p>
+                        
+                    <h2>Gráfico de dispersión:</h2>
+                    <p id="num-points"></p>
+                    <div id="chart-container">
+                        <!-- Gráfico de dispersión -->
+                        <canvas id="scatter-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+    
+        
 
     </section>
 

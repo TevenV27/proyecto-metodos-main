@@ -46,7 +46,7 @@ header {
     position: fixed;
     width: 100%;
     height: 70px;
-    background: #0056b3;
+    background: #0057b3e3;
     display: flex;
     align-items: center;
     color: white;
@@ -212,4 +212,11 @@ table{
 th, td {
     text-align: center;
     border-bottom: 1px solid rgb(190,190,255);
+}
+
+
+@media(max-width: 500px){
+    .img{
+        display: none;
+    }
 }
